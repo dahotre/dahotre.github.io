@@ -25,9 +25,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #0086B3; }
+a         { color: #888; }
 a:hover   { color: #000; }
-a:visited { color: #0086B3; }
+a:visited { color: #888; }
 
 table {
   font-size: inherit;
@@ -52,6 +52,10 @@ ul.posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
+}
+
+.hidden {
+  display: none;
 }
 
 /*****************************************************************************/
@@ -100,10 +104,11 @@ ul.posts span {
 }
 
 .site h1.title a, .site h1.title a:visited {
-  color: darkolivegreen;
+  color: #777;
   font-weight: bold;
   font-size: 1.5em;
   font-family: 'Averia Serif Libre', cursive;
+  text-decoration: none;
 }
 
 .site .meta {
@@ -121,10 +126,6 @@ ul.posts span {
 .site .footer .contact {
   float: left;
   margin-right: 3em;
-}
-
-.site .footer .contact a {
-  color: #8085C1;
 }
 
 .site .footer .rss {
