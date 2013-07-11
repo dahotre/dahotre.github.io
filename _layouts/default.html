@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/"><img src="/assets/logo.jpg" class="logo"/></a></h1>
+              <!-- <a class="extra" href="/">home</a> -->
+            </div>
+
+                {{ content }}
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Aniket Dahotre<br />
+                  Software Developer@Overstock.com
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/dahotre/">github.com/dahotre</a><br />
+                  <a href="http://twitter.com/dahotre/">twitter.com/dahotre</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Lato:300:latin', 'Averia+Serif+Libre:700:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+
+    </body>
+</html>
