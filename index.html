@@ -12,22 +12,8 @@ title: Dahotre | Home
 		<div class="post">
 		{{ site.posts.first.content }}
 		</div>
-		<a href="https://github.com/dahotre/dahotre.github.io/edit/master/_posts/{{ site.posts.first.location }}#fullscreen_blob_contents">Edit</a>
+		<a href="https://github.com/dahotre/dahotre.github.io/edit/master/_posts/{{ site.posts.first.location }}#fullscreen_blob_contents"><i class="icon-edit"></i>Edit</a>
 	</article>
 	<!-- First post END-->
 	<hr />
-	<nav>
-		<input type="search" placeholder="Search" id="search" />
-		<a href="#" id="clear_search" class="hidden">Clear Search</a>
-	</nav>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li id="{{ post.url }}" class="doc">
-      	<span class="doc_date">{{ post.date | date_to_string }}</span>
-      	 &raquo; 
-      	<a href="{{ post.url }}" class="doc_title">{{ post.title }}</a>
-      	<span class="hidden doc_content">{{ post.content }}</span>
-      </li>
-    {% endfor %}
-  </ul>
 </div>
