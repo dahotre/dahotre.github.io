@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-<h1 class="title"><a href="{{ site.posts.first.url }}">{{ page.title }}<a href="{{ page.url }}" class="permalink"></a></h1>
+<h1 class="title">
+	<a href="{{ page.url }}">
+		{{ page.title }}
+	</a>
+</h1>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
