@@ -57,7 +57,7 @@ static < T > void fromArrayToCollection(T[] a, Collection< T > c) {
     }
 }
 {% endhighlight %}
-If there is no dependency between the return type and/or the arguments of a method, then you are better off, using wildcards instead of generic method. [Excellent example]()
+If there is no dependency between the return type and/or the arguments of a method, then you are better off, using wildcards instead of generic method. [Excellent example](http://docs.oracle.com/javase/tutorial/extra/generics/methods.html)
 
 #### Array vs ArrayList
 `ArrayList` can hold a list of Objects, not primitives, whereas `Array` can hold either.
