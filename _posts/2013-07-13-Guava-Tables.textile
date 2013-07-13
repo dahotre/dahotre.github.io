@@ -1,18 +1,16 @@
 ---
 layout: post
-title:  "Google Guava niceties: Table"
+title:  "Guava I: Table"
 date:   2013-07-13 00:37
 location:   "2013-07-13-Guava-Tables.textile" 
 ---
-The "Table interface":http://docs.guava-libraries.googlecode.com/git/javadoc/index.html?com/google/common/collect/Table.html introduced in Guava is helpful in implementing Tabular data, such as data to be written to a CSV. Think about it as a spreadsheet. All the data in a spreadsheet can be represented by 3 parameters: the row number, column number, and the actual value stored in the cell. Hence the `Table<R, C, V>` interface has 3 generic parameters too.
+The "Table interface":http://docs.guava-libraries.googlecode.com/git/javadoc/index.html?com/google/common/collect/Table.html introduced in Guava is helpful in implementing Tabular data, such as data to be written to a CSV. Think about it as a spreadsheet. All the data in a spreadsheet can be represented by 3 parameters: the row number, column number, and the actual value stored in the cell. Hence the @Table<R, C, V>@ interface has 3 generic parameters too.
+
 {% highlight java %}
 /*
   | Name | GPA
-================
 0 | Bob  | 2.3
-----------------
 1 | Jim  | 3.4
-----------------
 2 | Tim  | 2.8
 
 */
@@ -28,9 +26,11 @@ studentData.put(2, "GPA", "2.8");
 {% endhighlight %}
 
 h4. Important instance methods:
-# `Map<R, V> column(C columnKey)`: Returns a map of Row->Value for the given column. For e.g., `studentData.column("Name")` in the above case would return a `Map` that looks like: `{ 0: "Bob", 1: "Jim", 2: "Time"}`.
-# `Map<C, V> row(R rowKey)`: Returns a map of Column->Value for the given row. For e.g., `studentData.row(2)` would return a `Map` that looks like: `{ "Name" : "Tim", "GPA" : 2.8 }`
+
+# @Map<R, V> column(C columnKey)@: Returns a map of Row->Value for the given column. For e.g., @studentData.column("Name")@ in the above case would return a @Map@ that looks like: @{ 0: "Bob", 1: "Jim", 2: "Time"}@.
+# @Map<C, V> row(R rowKey)@: Returns a map of Column->Value for the given row. For e.g., @studentData.row(2)@ would return a @Map@ that looks like: @{ "Name" : "Tim", "GPA" : 2.8 }@
 
 h4. Implementations:
-All the implementations of `Table` can be used by the `static Table<R,C,V> create()` method, except for `ImmutableTable`. As the name suggests, this implementation builds an immutable object. Hence we need to `build` it using the provided `Builder`, i.e., `ImmutableTable.Builder<R,C,V>`. Calling the `build()` instance method of the `Builder` will return an immutable `Table`.
+
+All the implementations of @Table@ can be used by the @static Table<R,C,V> create()@ method, except for @ImmutableTable@. As the name suggests, this implementation builds an immutable object. Hence we need to @build@ it using the provided @Builder@, i.e., @ImmutableTable.Builder<R,C,V>@. Calling the @build()@ instance method of the @Builder@ will return an immutable @Table@.
 
