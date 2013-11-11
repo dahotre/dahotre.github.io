@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Git Notes"
+date:   2013-11-11 11:10
+location:   "2013-11-11-Git-Notes.markdown" 
+---
+
+#### Git workflow
+```
+$ git clone http://path-to-the-dot-git-file
+$ git checkout -b feature_name
+//Do work
+$ git add -u 
+//If new files need to be added, then git add <fileName>
+$ git commit -m "Commit message"
+//Here we are committing to our local repo.. not on a server
+$ git checkout master
+$ git merge feature_name
+// If you have not pulled changes on to your local master branch, this merge should be done without conflicts
+$ git pull --rebase
+// Pulling from remote server and rebasing your local changes on top of the changes made by others.. 
+// Possibility of conflicts here..
+$ git rebase -i HEAD~10
+//If you want to squish your multiple commits into one, the replace all the necessary words, "pick", with the letter s.
+$ git push
+```
+
+#### Other useful git commands
+* `$ git stash` : Stashes your local uncommitted changes, so that you switch from your dirty branch to another clean one.
