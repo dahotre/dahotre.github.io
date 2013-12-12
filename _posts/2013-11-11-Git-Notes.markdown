@@ -5,7 +5,7 @@ date:   2013-11-11 11:10
 location:   "2013-11-11-Git-Notes.markdown" 
 ---
 
-#### Git workflow
+```
 
   $ git clone http://path-to-the-dot-git-file
   
@@ -39,6 +39,6 @@ location:   "2013-11-11-Git-Notes.markdown"
   
   $ git push
 
-
+```
 #### Other useful git commands
 * `$ git stash` : Stashes your local uncommitted changes, so that you switch from your dirty branch to another clean one.
