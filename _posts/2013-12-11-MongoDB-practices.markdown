@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MongoDB practices"
-date:   2013-07-10 18:10
+date:   2013-12-11 14:10
 location:   "2013-12-11-MongoDB-practices.markdown" 
 ---
 Fact 1. : There is way too much criticism of MongoDB in several blog posts.
