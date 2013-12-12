@@ -69,3 +69,6 @@ Stack being implemented using an actual Stack, follows LIFO, i.e., it has limite
 
 #### finalize()
 Any object can override Object's finalize() method for cleaning up any resources. This method is only triggered by the GC whenever it deems the object ready to be GCed.
+
+#### == vs equals() for enum
+Both are similar for enum, unlike for `String`. So it is better to use `==` to avoid `NullPointerException`
