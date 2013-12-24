@@ -14,6 +14,7 @@ location:   "2013-12-20-All-I-want-in-ediary.markdown"
 * Themes for view/edit.. i.e., dark/light background, font selection
 * Export to CSV
 * 3rd Party data import, e.g., Foursquare checkins
+* Upload photos
 
 ### Good to have
 * Post to 3rd parties, e.g., save a diary entry to Dropbox
@@ -21,3 +22,4 @@ location:   "2013-12-20-All-I-want-in-ediary.markdown"
 
 ### Meh to have
 * Reminder to compose an entry
+* OCR for photos of journal entries
