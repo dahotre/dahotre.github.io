@@ -13,3 +13,18 @@ db.collection.update(
   { /* new value */ }
 );
 {% endhighlight %}
+
+Copied from the "official documentation":http://docs.mongodb.org/manual/reference/operator/update/pull/ :
+{% highlight javascript %}
+{ flags: ['vme', 'de', 'pse', 'tsc', 'msr', 'pae', 'mce' ] }
+{% endhighlight %}
+The following operation will remove the msr value from the flags array:
+{% highlight javascript %}
+db.cpuinfo.update( { flags: 'msr' }, { $pull: { flags: 'msr' } } )
+{% endhighlight %}
+
+I personally, had a hard time understanding the use for the first part of the @update@ command. If the values equallying 'msr' are going to be @pulled@ for the key equallying 'flags', then why repeat the same in the query part?
+
+Although the documentation is not incorrect, the oversimplified example makes it deceptive. The @$pull@ operator is not triggered until and unless there is a document in the collection that satisfies the query part of the command. Then, the @$pull@ operator is triggered on this selected output.
+
+All this explanation is unnecessary where the query depends on a single condition. But in case of multiple conditions, make sure to apply all the necessary conditions to the @$pull@ operator, and not the query part of the @update@ command.
