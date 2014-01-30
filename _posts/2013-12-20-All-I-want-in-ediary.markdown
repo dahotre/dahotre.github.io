@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "All I want in an e-diary"
+title:  "All I want in an e-journal"
 date:   2013-12-20 00:10
-location:   "2013-12-20-All-I-want-in-ediary.markdown" 
+location:   "2013-12-20-All-I-want-in-journal.markdown" 
 ---
 ### Must haves
 * Offline access
@@ -13,11 +13,11 @@ location:   "2013-12-20-All-I-want-in-ediary.markdown"
 ### Awesome to have
 * Themes for view/edit.. i.e., dark/light background, font selection
 * Export to CSV
-* 3rd Party data import, e.g., Foursquare checkins
+* 3rd Party data import, e.g., Foursquare checkins, Facebook status update.
 * Upload photos
 
 ### Good to have
-* Post to 3rd parties, e.g., save a diary entry to Dropbox
+* Post to 3rd parties, e.g., save a journal entry to box
 * Import from CSV
 
 ### Meh to have
