@@ -5,6 +5,7 @@ date:   2014-01-25 01:55
 location:   "2014-01-27-Mongodb-how-pull-works.textile" 
 ---
 h4. TLDR;
+
 h3. $pull is just an update. So the pulling happens only on the documents returned by the query part of @update@
 
 Some background first. The @$pull@ operator in MongoDB is used in conjunction with the @update@ command to remove (or pull out) elements from an array.
@@ -28,7 +29,7 @@ db.cpuinfo.update( { flags: 'msr' }, { $pull: { flags: 'msr' } } )
 
 Personally, I had a hard time understanding the necessity of the first part of the @update@ command in this case. If the values equallying 'msr' are going to be pulled for the key equallying 'flags', then why repeat the same in the query part?
 
-Although the documentation is not incorrect, the oversimplified example makes it deceptive. The @$pull@ operator is does not come into play, till the query part returns any documents. In other words, keep in mind that this is just a fancy @$update@. So, don't think about the @pull@ till the query part is satisfied by at least one document in the collection.
+Although the documentation is not incorrect, the oversimplified example makes it deceptive. The @$pull@ operator is does not come into play, till the query part returns any documents. In other words, keep in mind that this is just an extension to @update@. So, don't think about the @pull@ till the query part is satisfied by at least one document in the collection.
 
 For e.g., 
 {% highlight javascript %}
