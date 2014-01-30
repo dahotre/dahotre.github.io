@@ -6,7 +6,7 @@ location:   "2014-01-27-Mongodb-how-pull-works.textile"
 ---
 h4. TLDR;
 
-h3. $pull is just an update. So the pulling happens only on the documents returned by the query part of @update@
+h5. $pull is just an update. So the pulling happens only on the documents returned by the query part of @update@
 
 Some background first. The @$pull@ operator in MongoDB is used in conjunction with the @update@ command to remove (or pull out) elements from an array.
 
