@@ -72,3 +72,9 @@ Any object can override Object's finalize() method for cleaning up any resources
 
 #### == vs equals() for enum
 Both are similar for enum, unlike for `String`. So it is better to use `==` to avoid `NullPointerException`
+
+#### Basics of session management
+`HttpSession` generates a cookie named `jsessionid` on the client's browser. You can store the identifier of the user's session in this cookie by `httpSession.setAttribute("userName", "Bob")`. The server maintains this session in-memory (or on disk, as per your server's policy) for it's life. The duration can be set by `httpSession.setMaxInactiveInterval(n)`. If the `n <= 0`, then the session is maintained for ever by the server. The important thing to understand is that this persistence is on the server, not the client. The `jsessionid` cookie is killed as soon as the user closes the browser. The practice of storing the session for ever on the server sounds bad, but in fact is even worse than bad. It's horrible. The `jsessionid` itself has some risks (attacker can steal the cookie), and remembering and honoring it's value for ever is dangerous. 
+
+So how to let the user inside the secure area of your website, without having him to log in each time he closes the browser?
+Here is a very [nice article from 2006](http://jaspan.com/improved_persistent_login_cookie_best_practice) that explains best practices: 
