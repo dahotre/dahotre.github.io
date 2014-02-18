@@ -63,9 +63,10 @@ If there is no dependency between the return type and/or the arguments of a meth
 `ArrayList` can hold a list of Objects, not primitives, whereas `Array` can hold either.
 Size of an array cannot grow dynamically. ArrayList's size can.
 
-#### WTH is Stack and Heap
-Stack holds primitives. whereas Objects are allocated memory on the heap.
-Stack being implemented using an actual Stack, follows LIFO, i.e., it has limited memory and the stuff put on the stack last, will be vacated if more space is required. Heap undergoes garbage collection.
+#### WTH is Stack and Heap memory
+*Stack is the part of memory that holds the primitives and references to objects, whereas the actual objects are stored on the heap.
+*When the stack is full, a StackOverflowError exception is thrown. This is highly unlikely in normal programs because a separate stack is provided for each method. But if a method is called recursively, every primitive created in it will share the same stack and ultimately run out of space if not handled properly. 
+*When the Heap is full, it undergoes garbage collection, i.e., all the objects that are not referred anymore are removed from the memory. But if garbage collection is not enough, and the JVM has already expanded to it's maximum heap capacity (provided by the JVM argument -xmx), an OutOfMemoryError exception will be thrown.
 
 #### finalize()
 Any object can override Object's finalize() method for cleaning up any resources. This method is only triggered by the GC whenever it deems the object ready to be GCed.
