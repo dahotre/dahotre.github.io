@@ -18,7 +18,11 @@
 
 </head>
 <body>
-
+{% if post.wide eq true %}
+wide
+{% else %}
+non-wide
+{% endif %}
   <div class="container">
     <div class="site">
       <div class="header row">
